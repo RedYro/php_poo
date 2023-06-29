@@ -24,10 +24,10 @@
         public int $nbProduits;
 
         public function ajouterArticles(){
-            return "L'article a été ajouté !";
+            return "<p>L'article a été ajouté !</p>";
         }
         public function retirerArticles(){
-            return "L'article a été retiré !";
+            return "<p>L'article a été retiré !</p>";
         }
         public function nombreArticles(){
 
@@ -39,6 +39,11 @@
     // Panier => modèle, $panier_1 est une version concrète de ce modèle
     // "new" => mot clé permettant d'effectuer une instanciation (et donc de créer un objet)
     // var_dump($panier_1);
-    debug($panier_1); // Affiche la valeur de la propriété dans la propriété : type (object), nom de la classe, référence de l'objet
-    debug(get_class_methods($panier_1)); // Affiche les méthodes présentent dans l'objet 
+    // debug($panier_1); // Affiche la valeur de la propriété dans la propriété : type (object), nom de la classe, référence de l'objet
+    // debug(get_class_methods($panier_1)); // Affiche les méthodes présentent dans l'objet 
+    $panier_1->nbProduits = 5; // Accès à la propriété "$nbProduits" grâce à "->", appelée "opérateur objet" et on lui donne une valeur définie ("= 5") 
+    debug($panier_1);
+    echo "<p>Il y a " . $panier_1->nbProduits . " produit(s) dans le panier</p>";
+    echo $panier_1->ajouterArticles(); // Accès à la méthode 1 
+    echo $panier_1->retirerArticles(); // Accès à la méthode 2
 ?>
