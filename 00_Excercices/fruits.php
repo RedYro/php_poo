@@ -1,5 +1,5 @@
 <?php
-require_once("../functions.php");
+    require_once("../functions.php");
     class Fruit{
         private string $name;
         private string $color;
@@ -18,6 +18,9 @@ require_once("../functions.php");
         }
     }
     $fruit_1 = new Fruit("Fraise", "rouge");
-    debug($fruit_1);
+    // debug($fruit_1);
     echo "<p> Je suis une ".$fruit_1->getName()." ".$fruit_1->getColor()."</p>";
+    $fruit_2 = new Fruit("Pomme", "verte");
+    echo "<p> Je suis une ".$fruit_2->getName()." ".$fruit_2->getColor()."</p>";
+
 ?>
