@@ -29,8 +29,9 @@
         public function retirerArticles(){
             return "<p>L'article a été retiré !</p>";
         }
-        public function nombreArticles(){
-
+        // On peut déclarer des méthodes avec des paramètres
+        public function nombreArticles(int $nb = 0){
+            return "<p>Il y a $nb article(s) dans le panier.</p>";
         }
     }
 
@@ -43,7 +44,25 @@
     // debug(get_class_methods($panier_1)); // Affiche les méthodes présentent dans l'objet 
     $panier_1->nbProduits = 5; // Accès à la propriété "$nbProduits" grâce à "->", appelée "opérateur objet" et on lui donne une valeur définie ("= 5") 
     debug($panier_1);
-    echo "<p>Il y a " . $panier_1->nbProduits . " produit(s) dans le panier</p>";
+    echo "<p>Il y a " . $panier_1->nbProduits . " produit(s) dans le panier.</p>";
     echo $panier_1->ajouterArticles(); // Accès à la méthode 1 
     echo $panier_1->retirerArticles(); // Accès à la méthode 2
+    echo $panier_1->nombreArticles(); // Accès à la méthode 3
+    echo $panier_1->nombreArticles(20); // Accès à la méthode 3 avec un paramètre 
+
+    $panier_2 = new Panier(); // Instanciation d'un 2ème objet et stockage de celui-ci dans une variable
+    debug($panier_2);
+    $panier_2->nbProduits = 8;
+    debug($panier_2); 
+    unset($panier_1); // unset() => destruction d'un objet
+    // debug($panier_1); // Affiche "Warning : Undefined variable $panier_1"
+    debug($panier_2); 
+
+    $panier_3 = new Panier(); // Instanciation d'un 3ème objet et stockage de celui-ci dans une variable
+    debug($panier_3); // Vérification du nouvel objet $panier_3 afin de voir si celui-ci a pris la place de $panier_1 dans la mémoire : affiche 1 dans le "debug()"
+    
+    /*
+    * Une fois crées, les objets sont indépendants et ont chacuns leurs propriétés, ils ont tous accès aux méthodes déclarées dans la classe 
+    * Toutes les informations déclarées "public" dans une classe seront accessibles depuis l'extérieur de cette classe 
+    */
 ?>
