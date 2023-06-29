@@ -22,6 +22,7 @@
                 $this->nbLitreGasCar = $quantity; 
             }
         }
+        
         // GETTER //
         public function getSizeTankCar(){ // Méthode pour récupérer la taille du réservoir de la voiture
             return $this->sizeTankCar;
