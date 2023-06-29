@@ -17,7 +17,7 @@
     * 
     *  Pour définir  et créer une classe : on utilise le mot clé class suivit du nom de la classe (avec une lettre majuscule au début et sur chaque début d'un nouveau mot dans le nom de la classe) 
     *  exp: MyClass => voir le dossier 01_Classes_Objets. */
-    require_once("functions.php");
+    require_once("../functions.php");
     class Panier{
         // Propriété (ou attribut) => variable appartenant à une classe
         // Méthode => fonction appartenant à une classe 
