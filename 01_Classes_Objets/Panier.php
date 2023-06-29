@@ -17,11 +17,28 @@
     * 
     *  Pour définir  et créer une classe : on utilise le mot clé class suivit du nom de la classe (avec une lettre majuscule au début et sur chaque début d'un nouveau mot dans le nom de la classe) 
     *  exp: MyClass => voir le dossier 01_Classes_Objets. */
-    
+    require_once("functions.php");
     class Panier{
+        // Propriété (ou attribut) => variable appartenant à une classe
+        // Méthode => fonction appartenant à une classe 
+        public int $nbProduits;
 
+        public function ajouterArticles(){
+            return "L'article a été ajouté !";
+        }
+        public function retirerArticles(){
+            return "L'article a été retiré !";
+        }
+        public function nombreArticles(){
+
+        }
     }
 
-    $date = new DateTime();
-    $date2 = new DateTime();
+    // Création d'un objet représentant une instance de la classe (objet instancié)
+    $panier_1 = new Panier(); // Instanciation de la classe : instanciation ou création d'une classe "Panier", stockage dans un objet, permet de passer d'une classe à un objet 
+    // Panier => modèle, $panier_1 est une version concrète de ce modèle
+    // "new" => mot clé permettant d'effectuer une instanciation (et donc de créer un objet)
+    // var_dump($panier_1);
+    debug($panier_1); // Affiche la valeur de la propriété dans la propriété : type (object), nom de la classe, référence de l'objet
+    debug(get_class_methods($panier_1)); // Affiche les méthodes présentent dans l'objet 
 ?>
