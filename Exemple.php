@@ -1,7 +1,13 @@
 <?php
     class Duck{
         private $type = "colvert";
-        // protected $dead = false;
+        protected $dead;
+
+        // CONSTRUCTOR
+        public function __construct($dead = false){
+            $this->dead = $dead;
+            echo "<p>Un nouveau canard est sorti de son oeuf</p>";
+        }
         
         // GETTER //
         public function getType(){
@@ -14,16 +20,17 @@
         }
 
         public function flyAway(string $place = 'vers nul part'){
-            echo "<p style=\"font-weight=bold;\">Je m'envole $place</p>";
+            echo "<p>Le canard s'envole $place</p>";
         }
     }
 
-    $duck = new Duck();
-    echo "<p>" . $duck->getType() . "</p>"; 
-    // echo $duck->type; // Pas de "$" sur type, instanciation de la class
-    $duck->setType('carolin'); 
-    echo "<p>" . $duck->getType() . "</p>"; 
-    $duck->flyAway();
+    $duck = new Duck(); // Instanciation de la classe, création d'un objet
+    $duck2 = new Duck();
+    // echo "<p>" . $duck->getType() . "</p>"; 
+    // echo $duck->type; // Pas de "$" sur type
+    // $duck->setType('carolin'); 
+    // echo "<p>" . $duck->getType() . "</p>"; 
+    // $duck->flyAway('loin');
 
     // $hunter = new Hunter('bon');
     
@@ -33,5 +40,5 @@
     // } else{
     //     $duck->flyAway('loin');
     // }
-    
+
 ?>
