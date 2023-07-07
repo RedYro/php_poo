@@ -28,7 +28,7 @@
     }
     // ----------------------------------------------------------------
 
-    echo "<h3>Méthode sans \"__constructor\"</h3>";
+    echo "<h3>Méthode 1 sans \"__constructor\"</h3>";
     echo "<h4>Exemple 1 :</h4>";
     // Exemple 1 :
     $membre1 = new Membre_1(); // Instanciation de la classe
@@ -100,7 +100,7 @@
     }
     // ----------------------------------------------------------------
 
-    echo "<h3>Méthode avec \"__constructor\"</h3>";
+    echo "<h3>Méthode 2 avec \"__constructor\"</h3>";
     echo "<h4>Exemple 5 :</h4>";
     // Exemple 5 :
     $membre3 = new Membre_2("Yato","Blue");
