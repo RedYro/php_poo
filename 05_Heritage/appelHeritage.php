@@ -22,5 +22,4 @@
     // echo $membre1->accessBackOffice(); // Accès à la méthode "accessBackOffice" impossible car celle-ci n'est pas présente dans la classe "Membre", aucun héritage n'est présent sur la classe "Membre" (héritage présent seulement de "Membre" à "Admin")
     // Lors d'un héritage, on hérite de tout même les propriétés ou méthodes "private" 
 
-
 ?>
