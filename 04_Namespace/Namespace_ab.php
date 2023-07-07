@@ -12,7 +12,7 @@
     }
 
     //----------------------------------------------------------------
-    
+
     namespace B{
         function ville(){
             return "<p>Nante</p>";
@@ -22,4 +22,8 @@
             return "<p>Fonction strlen de B</p>";
         }
     }
+
+    //----------------------------------------------------------------
+
+    // echo A\ville(); // Impossible d'utiliser le code d'un "namespace" dans un même fichier
 ?>
